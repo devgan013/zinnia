@@ -1,0 +1,292 @@
+<div id="MyDetails">
+	<!--Sign In Information Start-->
+<div class="box-fluid">
+		<h1>Sign In Information</h1>
+		<div class="inner-box34 mgRgt40">
+        	<div class="email-box">
+      			<div class="lab_grey_txt">
+      				<label for="tbFrom" class="lab_txt span110">Email Address</label>
+      			</div>
+      			<div class="input_txt">
+      				<input type="text" tabindex="1" class="email" autocomplete="off" value="<%= UserInfo.Email %>" maxlength="150" id="txtEmail">
+      			</div>
+      			<div class="email_grey"></div>
+    		</div>
+        </div> 
+        
+        <div class="inner-box34">
+        	<div class="email-box">
+      			<div class="lab_grey_txt">
+      				<label for="tbFrom" class="lab_txt span110">Password</label>
+      			</div>
+      			<div style="float:left">
+      				<input type="password" tabindex="2" id="txtPass" class="email" autocomplete="off" placeholder="*******" maxlength="150">
+      			</div>
+      			<div class="email_grey"></div>
+    		</div>
+        </div>    
+</div>
+<!--Sign In Information End-->
+<!--Personal Information Start-->
+<div class="box-fluid">
+		<h1>Personal Information</h1>
+		<div class="inner-box34">
+        	<div class="inner-box21 mgRgt10">
+            	<div class="select_wrap mgBtm10">
+      				<div style="float:left; min-width:50px;">
+      					<label for="ddlTitleCategory" class="lab_txt">Title</label>
+      				</div>
+      				<div class="styled">
+      					<select id="ddlTitleCategory">
+                  <% _.each(ddlTitleCategoryList, function(ddlItem, index) { %> 
+                    <option value="<%= ddlItem.key %>"><%= ddlItem.value %></option>
+                  <% }); %>
+                </select>
+      				</div>
+				</div>
+        	</div> 						<!--Title Start-->
+            <div class="inner-box12">
+            	<div class="select_wrap">
+      				<div class="styled">
+      					<select id="ddlTitle">
+                  <% _.each(ddlTitleList, function(ddlItem, index) { %> 
+                    <option value="<%= ddlItem.key %>"><%= ddlItem.value %></option>
+                  <% }); %>
+                </select>
+    				</div>
+				</div>
+        	</div>						<!--Mr Start-->
+        </div>
+</div>
+<div class="box-fluid">
+		<div class="inner-box34 mgRgt40">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">First Name<span>*</span></label>
+      			<input type="text" tabindex="2" id="txtFirstName" class="field" autocomplete="off" value="<%= FirstName %>" maxlength="35">
+    		</div>
+        </div> 
+        
+        <div class="inner-box34">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Last Name<span>*</span></label>
+      			<input type="text" tabindex="2" id="txtLastName" class="field" autocomplete="off" value="<%= LastName %>" maxlength="35">
+    		</div>
+        </div>    
+</div>
+<div class="box-fluid">
+		<div class="inner-box34 mgRgt40">
+        	<div class="inner-box17 mgRgt10">
+            	<div class="select_wrap mgBtm10">
+      				<div style="float:left; min-width:50px;">
+      					<label for="ddAAdt" class="lab_txt">Date of Birth<span>*</span></label>
+      				</div>
+      				<div class="styled">
+      					<select id="ddlDate" tabindex="8" >
+                <% _.each(ddlDateList, function(ddlItem, index) { %> 
+                  <option value="<%= ddlItem.key %>"><%= ddlItem.value %></option>
+                <% }); %>
+              </select>
+      				</div>
+				</div>
+        	</div> 						<!--Title Start-->
+            <div class="inner-box6 mgRgt10">
+            	<div class="select_wrap">
+      				<div class="styled">
+      					<select id="ddlMonth" tabindex="8">
+                <% _.each(ddlMonthList, function(ddlItem, index) { %> 
+                  <option value="<%= ddlItem.key %>"><%= ddlItem.key %></option>
+                <% }); %>
+              </select>
+    				</div>
+				</div>
+        	</div>	
+            <div class="inner-box9">
+            	<div class="select_wrap">
+      				<div class="styled">
+      					<select id="ddlYear" tabindex="8">
+                <% _.each(ddlYearList, function(ddlItem, index) { %> 
+                  <option value="<%= ddlItem.key %>"><%= ddlItem.value %></option>
+                <% }); %>
+              </select>
+    				</div>
+				</div>
+        	</div>					<!--Mr Start-->
+        </div>
+        
+        <div class="inner-box34">
+        	<div class="inner-box21 mgRgt10">
+            	<div class="select_wrap mgBtm10">
+      				<div style="float:left; min-width:70px;">
+      					<label for="ddAAdt" class="lab_txt">Gender</label>
+      				</div>
+      				<div class="styled">
+      					<select id="ddlGender" tabindex="8">
+                <% _.each(ddlGenderList, function(ddlItem, index) { %> 
+                  <option value="<%= ddlItem.key %>"><%= ddlItem.value %></option>
+                <% }); %>
+              </select>
+      				</div>
+				</div>
+        	</div> 						<!--Title Start-->
+        </div>
+</div>
+<div class="box-fluid">
+		<div class="inner-box34">
+            	<div class="select_wrap mgBtm10">
+      				<div style="float:left; min-width:50px;">
+      					<label for="ddAAdt" class="lab_txt">Country<span>*</span></label>
+      				</div>
+      				<div class="styled">
+      					<select tabindex="8" id="ddAAdt">
+      					<option  value="0" selected="selected">United States</option>
+      					<option value="1">India</option>
+      					</select>
+      				</div>
+        	</div> 						
+        </div>
+</div>
+<div class="box-fluid">
+		<div class="inner-box34 mgRgt40">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Addres Line 1<span>*</span></label>
+      			<input type="text" id="txtAddressOne" value="<%= AddressInfo.Street1 %>" tabindex="2" class="field" autocomplete="off" value="" maxlength="35">
+    		</div>
+        </div> 
+        
+        <div class="inner-box34">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Addres Line 2</label>
+      			<input type="text" id="txtAddressTwo" value="<%= AddressInfo.Street2 %>" tabindex="2" class="field" autocomplete="off" value="" maxlength="35">
+    		</div>
+        </div>    
+</div>
+<div class="box-fluid">
+		<div class="inner-box34 mgRgt40">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">City<span>*</span></label>
+      			<input type="text" value="<%= AddressInfo.City %>" id="txtCity" tabindex="2" class="field" autocomplete="off" value="" maxlength="35">
+    		</div>
+        </div> 
+        
+        <div class="inner-box34">
+        	<div class="inner-box21 mgRgt10">
+            	<div class="select_wrap mgBtm10">
+      				<div style="float:left; min-width:70px;">
+      					<label for="ddAAdt" class="lab_txt">State<span>*</span></label>
+      				</div>
+      				<div class="styled">
+      					<select tabindex="8" id="ddAAdt">
+      					<option  value="0" selected="selected">NY</option>
+      					<option value="1">LX</option>
+      					</select>
+      				</div>
+				</div>
+        	</div> 						<!--Title Start-->
+        </div>    
+</div>
+<div class="box-fluid">
+		<div class="inner-box34 mgRgt40">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Zip<span>*</span></label>
+      			<input type="text" tabindex="2" id="txtZipCode" class="field" autocomplete="off" value="<%= AddressInfo.Zip %>" maxlength="35">
+    		</div>
+        </div> 
+        
+        <div class="inner-box34">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">TSA Redress #</label>
+      			<input id="txtTsaNumber" type="text" value="<%= TsaNumber %>" tabindex="2" class="field" autocomplete="off" maxlength="35">
+    		</div>
+        </div>    
+</div>
+<div class="box-fluid mgBtm20">
+		<div class="inner-box34 mgRgt40">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Contact Phone<span>*</span></label>
+      			<input type="text" tabindex="2" id="txtContactNumber" class="field" autocomplete="off"  value="<%= AddressInfo.Landline %>" maxlength="35">
+    		</div>
+        </div> 
+        
+        <div class="inner-box34">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Mobile Phone</label>
+      			<input type="text" tabindex="2" id="txtMobileNumber" class="field" autocomplete="off"  value="<%= AddressInfo.Mobile %>" maxlength="35">
+    		</div>
+        </div>    
+</div>
+<div class="box-fluid mgBtm20">
+<input type="checkbox" id="c1" name="cc" />
+<label for="c1"><span></span>Use for Billing Details</label>
+</div>
+<div class="box-fluid mgBtm20">
+<span class="show_msg">In order to comply with the TSA’s Secure Flight Program, we require the traveler’s full name, date of birth and gender that matches exactly with the Passport or Government issued photo ID that will be shown at the airport</span>
+</div>
+<div class="box-fluid mgBtm20">
+<h1>More Information</h1>
+<span class="">Your privacy is important to us. Your information will never be shared, sold or leased to a third party. We request this information for internal purposes only to make our communication more interesting and relevant to you.</span>
+</div>
+<div class="box-fluid">      
+       <div class="inner-box34">
+        	<div class="input-box">
+      			<label for="tbFrom" class="mor_txt span120"># of people in household</label>
+      			<input type="text" tabindex="2" class="field" autocomplete="off" value="" maxlength="35">
+    		</div>
+        </div>    
+</div>
+<div class="box-fluid">
+		<div class="inner-box34 mgRgt40">
+        	<div class="select_wrap mgBtm10">
+      				<div>
+      					<label for="ddAAdt" class="lab_txt inner-box12">Profession</label>
+      				</div>
+      				<div class="styled">
+      					<select tabindex="8" id="ddAAdt">
+      					<option  value="0" selected="selected">Full Time Employed</option>
+      					<option value="1">Part Time Employed</option>
+      					</select>
+      				</div>
+        	</div> 						
+        </div>
+        <div class="inner-box34"> 	
+            	<div class="select_wrap mgBtm10">
+      				<div>
+      					<label for="ddAAdt" class="lab_txt inner-box10">Industry</label>
+      				</div>
+      				<div class="styled">
+      					<select tabindex="8" id="ddAAdt">
+      					<option  value="0" selected="selected">Finance</option>
+      					<option value="1">Other</option>
+      					</select>
+      				</div>
+        	</div>					
+        </div>
+</div>
+<div class="box-fluid mgBtm30">
+		<div class="inner-box34 mgRgt40">
+        	<div class="select_wrap mgBtm10">
+      				<div>
+      					<label for="ddAAdt" class="more_txt inner-box12">Annual household <br> income (in USD $)</label>
+      				</div>
+      				<div class="styled">
+      					<select tabindex="8" id="ddAAdt">
+      					<option  value="0" selected="selected">Select</option>
+      					<option value="1">$0 - $1000</option>
+                        <option value="1">$1000 - $5000</option>
+      					</select>
+      				</div>
+        	</div> 						
+        </div>
+        <div class="inner-box34">
+        	<div class="input-box">
+      			<label for="tbFrom" class="lab_txt span120">Please Specify</label>
+      			<input type="text" tabindex="2" class="field" autocomplete="off" value="" maxlength="35">
+    		</div>
+        </div>
+</div>
+<div class="box-fluid mgBtm30">      
+       <div class="user-profile-btn">
+          <button type="button" id="saveUserDetails">Save Information</button>
+       </div> 
+</div>
+<!--Personal Information End-->
+</div>
